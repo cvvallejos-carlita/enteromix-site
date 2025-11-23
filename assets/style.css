@@ -472,3 +472,147 @@ a {
   color: var(--muted);
   text-align: center;
 }
+/* ==== HERO EXTRA SOLO IMAGEN ==== */
+
+.hero-image-only {
+  margin-top: 26px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 22px 70px rgba(15,23,42,0.6);
+  background: #000; /* por si tarda en cargar */
+}
+
+.hero-image-only img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* === HERO TIPO CANVA (BANNER OSCURO) === */
+
+.hero-canva {
+  margin-top: 24px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 22px 70px rgba(15,23,42,0.65);
+  background:
+    linear-gradient(120deg, rgba(15,23,42,0.85), rgba(15,23,42,0.7)),
+    url("assets/img/enteromix-vial-hero.jpg") center/cover no-repeat;
+  color: #ffffff;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-canva-inner {
+  width: 100%;
+  padding: 24px 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 18px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-canva-inner {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 18px 18px 20px;
+  }
+}
+
+.hero-canva-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.hero-canva-brand-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #e5e7eb;
+  position: relative;
+}
+
+.hero-canva-brand-icon::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 3px;
+  background: #22c55e;
+}
+
+.hero-canva-title {
+  font-size: 2.6rem;
+  margin: 10px 0 6px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-canva-title {
+    font-size: 2.1rem;
+  }
+}
+
+.hero-canva-sub {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  max-width: 460px;
+}
+
+.hero-canva-cta-row {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-canva-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(229,231,235,0.8);
+  background: rgba(15,23,42,0.15);
+  color: #f9fafb;
+  font-size: 0.86rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: .18s ease;
+}
+
+.hero-canva-btn:hover {
+  background: rgba(15,23,42,0.4);
+  border-color: #ffffff;
+}
+
+.hero-canva-pill {
+  justify-self: flex-end;
+  text-align: right;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.hero-canva-pill span {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(229,231,235,0.8);
+  background: rgba(15,23,42,0.45);
+}
+
+@media (max-width: 900px) {
+  .hero-canva-pill {
+    justify-self: flex-start;
+    text-align: left;
+    margin-top: 8px;
+  }
+}
